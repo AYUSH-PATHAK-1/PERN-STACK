@@ -4,6 +4,7 @@ const cors=require("cors");
 // const pool=require("./db")
 
 require("./db/conn");
+app.use(cors({origin:"http://localhost:5173",credentials:true}));
 app.use(express.json());
 
 
