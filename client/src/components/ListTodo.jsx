@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { URL } from '../../URL'
+import EditTodo from './EditTodo';
 
 const ListTodo = () => {
 
@@ -45,7 +46,7 @@ const ListTodo = () => {
     <tbody>
        {todo.map(todo=>(<tr key={todo.todo_id}>
         <td>{todo.description}</td>
-        <td><button className='btn btn-success'>Edit</button></td>
+        <td><button className='btn btn-success'><EditTodo todo={todo}/></button></td>
         <td><button className='btn btn-danger' onClick={()=>deleteTodo(todo.todo_id)}>Delete</button></td>
       </tr>))}      
     </tbody>

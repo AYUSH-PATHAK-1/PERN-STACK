@@ -15,6 +15,7 @@ const InputTodo = () => {
                 const res=await axios.post(URL +"/todos",{description:description},{withCredentials:true});
                 console.log("Data Added Successfull")
                 setDescription("");
+                window.location="/"
             }
         }catch(e){
             console.log(e)
